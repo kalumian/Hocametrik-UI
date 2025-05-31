@@ -1,0 +1,39 @@
+{
+    "Ulink":"https://yokatlas.yok.gov.tr",
+    "BLink" : "/lisans-univ.php?u={u}",
+    "KLink`" : "/externalAppParameter.php?y={b}",
+    "Universties": [
+        {
+            "id": 0,
+            "name": "",
+            "bolumler": [
+                {
+                    "id": 0,
+                    "name":"",
+                    "staffMembersLinks": [
+                        {
+                            "id": 1,
+                            "name": "1",
+                            "link": "https://www.google.com"
+                        },
+                        {
+                            "id": 1,
+                            "name": "1",
+                            "link": "https://www.google.com"
+                        }
+                    ],
+                    "staffmembers": [
+                        {
+                            "id": 0,
+                            "name": "",
+                            "alanlar":["",""]
+                        }
+                    ]
+                }
+            ]
+        },
+        {}
+
+    ]
+
+}

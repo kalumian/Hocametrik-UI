@@ -32,7 +32,7 @@ function Contact() {
                             <textarea id="message" rows={5} placeholder="Mesajınızı buraya yazın..." className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
                         </div>
                         <div className="md:col-span-2 text-sm text-gray-500">
-                            Bu formu göndererek <a href="#" className="text-blue-600 hover:underline">kullanım koşullarımızı</a> ve <a href="#" className="text-blue-600 hover:underline">gizlilik politikamızı</a> kabul etmiş olursunuz.
+                            Bu formu göndererek <a href="/privacy-policy" className="text-blue-600 hover:underline">kullanım koşullarımızı</a> ve <a href="/privacy-policy" className="text-blue-600 hover:underline">gizlilik politikamızı</a> kabul etmiş olursunuz.
                         </div>
                         <div className="md:col-span-2">
                             <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">

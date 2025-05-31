@@ -12,6 +12,9 @@ import Academics from './pages/Academic/Academics'
 import Evaluations from './pages/Evaluation/Evaluations'
 import Contact from './pages/Contact/contact'
 import AboutPage from './pages/About/about'
+import PrivacyPolicyPage from './pages/PrivacyPolicy/privacypolicy'
+
+
 function App() {
 
   return (
@@ -20,6 +23,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/contact' element={<MainLayout><Contact /></MainLayout>} />
         <Route path='/about' element={<MainLayout><AboutPage /></MainLayout>} />
+        <Route path='/privacy-policy' element={<MainLayout><PrivacyPolicyPage /></MainLayout>} />
         <Route path='/universities' element={<MainLayout><Universities /></MainLayout>} />
         <Route path="/universities/:universityId/faculties" element={<MainLayout children={<Faculties />} />} />
         <Route path="/universities/:universityId/faculties/:facultyId/academics" element={<MainLayout children={<Academics />} />} />

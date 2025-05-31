@@ -1,6 +1,6 @@
 function Contact() {
     return (
-        <section className="bg-white min-h-screen flex items-center justify-center px-4">
+        <section className="bg-white min-h-screen flex items-center justify-center px-4 pt-12">
             <div className="py-8 lg:py-16 w-full max-w-screen-md">
                 <h2 className="mb-4 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                     İletişim
@@ -9,53 +9,38 @@ function Contact() {
                     Teknik bir sorun mu yaşıyorsunuz? Bir özellik hakkında geri bildirim mi göndermek istiyorsunuz?
                     İş planımız hakkında bilgi mi almak istiyorsunuz? Bize bildirin.
                 </p>
-                <form action="#" className="space-y-8">
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
-                            E-posta adresiniz
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                            placeholder="ornek@eposta.com"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900">
-                            Konu
-                        </label>
-                        <input
-                            type="text"
-                            id="subject"
-                            className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300
-                                shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Size nasıl yardımcı olabiliriz?"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900">
-                            Mesajınız
-                        </label>
-                        <textarea
-                            id="message"
-                            rows={6}
-                            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm
-                                border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Yorumunuzu buraya yazın..."
-                        ></textarea>
-                    </div>
-                    <button
-                        type="submit"
-                        className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg
-                            bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-                    >
-                        Mesaj Gönder
-                    </button>
-                </form>
+                <div className="max-w-3xl mx-auto p-4 sm:p-8 bg-white rounded-lg shadow-md mt-8 sm:mt-10 relative z-10">
+                    <form className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                        <div>
+                            <label htmlFor="first-name" className="block mb-2 text-sm font-medium text-gray-900">Adınız</label>
+                            <input type="text" id="first-name" placeholder="Ahmet" className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        </div>
+                        <div>
+                            <label htmlFor="last-name" className="block mb-2 text-sm font-medium text-gray-900">Soyadınız</label>
+                            <input type="text" id="last-name" placeholder="Yılmaz" className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        </div>
+                        <div>
+                            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">E-posta Adresiniz</label>
+                            <input type="email" id="email" placeholder="ornek@mail.com" className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        </div>
+                        <div>
+                            <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900">Telefon Numaranız</label>
+                            <input type="tel" id="phone" placeholder="+90 555 123 45 67" className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                        <div className="md:col-span-2">
+                            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900">Mesajınız</label>
+                            <textarea id="message" rows={5} placeholder="Mesajınızı buraya yazın..." className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <div className="md:col-span-2 text-sm text-gray-500">
+                            Bu formu göndererek <a href="#" className="text-blue-600 hover:underline">kullanım koşullarımızı</a> ve <a href="#" className="text-blue-600 hover:underline">gizlilik politikamızı</a> kabul etmiş olursunuz.
+                        </div>
+                        <div className="md:col-span-2">
+                            <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+                                Mesaj Gönder
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     );

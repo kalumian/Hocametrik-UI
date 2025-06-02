@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import IAcademic from './IAcademic';
 import { Link, useParams } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
+import { FaComment } from 'react-icons/fa';
 
 interface Props {
   academics: IAcademic[];
@@ -75,6 +76,31 @@ export default function DesktopAcademics({ academics }: Props) {
               <span className="bg-blue-200 px-3 py-0.5 rounded-full text-sm">
                 {academic.evaluationsCount}
               </span>
+            </motion.button>
+          </Link>
+          <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/comment`}>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full mt-4 bg-gradient-to-r from-green-50 to-green-100 
+               text-green-600 px-6 py-3 rounded-xl
+               flex items-center justify-center gap-3 font-medium
+               hover:from-green-100 hover:to-green-200 
+               transition-all duration-200 group"
+            >
+              <motion.span
+                whileHover={{
+                  y: [0, -4, 0], // 3 kademeli zıplama
+                  rotate: [0, 15, -15, 0], // Sallanma
+                  transition: {
+                    duration: 0.6,
+                    ease: "easeInOut"
+                  }
+                }}
+              >
+                <FaComment className="text-green-500" />
+              </motion.span>
+              <span>Yorum Yap</span>
             </motion.button>
           </Link>
           <div className="text-sm text-gray-600 mt-2">

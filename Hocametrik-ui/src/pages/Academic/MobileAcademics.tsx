@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import IAcademic from './IAcademic';
 import { FaStar } from 'react-icons/fa';
+import { FaComment } from 'react-icons/fa';
 
 interface Props {
   academics: IAcademic[];
@@ -43,12 +44,16 @@ export default function MobileAcademics({ academics }: Props) {
                 <div className="text-xs">Anlatım</div>
               </div>
               <div className="text-center p-2 bg-gray-50 rounded">
-                <div className="font-semibold">{academic.attitudePointsAverage}</div>
-                <div className="text-xs">Tutum</div>
+                <div className="font-semibold">{academic.accessibilityPointsAverage}</div>
+                <div className="text-xs">Erişebilirlik</div>
               </div>
               <div className="text-center p-2 bg-gray-50 rounded">
-                <div className="font-semibold">{academic.supportPointsAverage}</div>
-                <div className="text-xs">Destek</div>
+                <div className="font-semibold">{academic.fairnessPointsAverage}</div>
+                <div className="text-xs">Notlandırma</div>
+              </div>
+              <div className="text-center p-2 bg-gray-50 rounded">
+                <div className="font-semibold">{academic.materialQualityPointsAverage}</div>
+                <div className="text-xs">Ders Materyali</div>
               </div>
             </div>
             <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/evaluations`}>
@@ -64,6 +69,31 @@ export default function MobileAcademics({ academics }: Props) {
                 <span className="bg-blue-100 px-2 py-0.5 rounded-full text-xs">
                   {academic.evaluationsCount}
                 </span>
+              </motion.button>
+            </Link>
+            <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/comment`}>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full mt-4 bg-gradient-to-r from-green-50 to-green-100 
+                           text-green-600 px-6 py-3 rounded-xl
+                           flex items-center justify-center gap-3 font-medium
+                           hover:from-green-100 hover:to-green-200 
+                           transition-all duration-200 group"
+              >
+                <motion.span
+                  whileHover={{
+                    y: [0, -4, 0], // 3 kademeli zıplama
+                    rotate: [0, 15, -15, 0], // Sallanma
+                    transition: {
+                      duration: 0.6,
+                      ease: "easeInOut"
+                    }
+                  }}
+                >
+                  <FaComment className="text-green-500" />
+                </motion.span>
+                <span>Yorum Yap</span>
               </motion.button>
             </Link>
           </div>

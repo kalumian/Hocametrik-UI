@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function DesktopAcademics({ academics }: Props) {
-    const {universityId, facultyId } = useParams<{ universityId: string; facultyId: string }>();
+  const { universityId, facultyId } = useParams<{ universityId: string; facultyId: string }>();
 
   const getScoreColor = (score: number) => {
     if (score >= 75) return 'text-green-600 bg-green-50 border-green-200';
@@ -48,12 +48,16 @@ export default function DesktopAcademics({ academics }: Props) {
               <div className="text-sm text-gray-600">Anlatım</div>
             </div>
             <div className="text-center p-3 bg-gray-50 rounded-lg">
-              <div className="font-semibold text-lg">{academic.attitudePointsAverage}</div>
-              <div className="text-sm text-gray-600">Tutum</div>
+              <div className="font-semibold text-lg">{academic.accessibilityPointsAverage}</div>
+              <div className="text-sm text-gray-600">Erişebilirlik</div>
             </div>
             <div className="text-center p-3 bg-gray-50 rounded-lg">
-              <div className="font-semibold text-lg">{academic.supportPointsAverage}</div>
-              <div className="text-sm text-gray-600">Destek</div>
+              <div className="font-semibold text-lg">{academic.fairnessPointsAverage}</div>
+              <div className="text-sm text-gray-600">Notlandırma</div>
+            </div>
+            <div className="text-center p-3 bg-gray-50 rounded-lg">
+              <div className="font-semibold text-lg">{academic.materialQualityPointsAverage}</div>
+              <div className="text-sm text-gray-600">Ders Materyali</div>
             </div>
           </div>
           <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/evaluations`}>

@@ -13,8 +13,9 @@ const mockAcademics: IAcademic[] = [
     name: "Dr. Ahmet Yılmaz",
     evaluationsCount: 45,
     explanationPointsAverage: 85,
-    attitudePointsAverage: 90,
-    supportPointsAverage: 88,
+    accessibilityPointsAverage: 90,
+    fairnessPointsAverage: 88,
+    materialQualityPointsAverage: 92,
     totalPointsAverage: 88,
     courses: "Matematik, Fizik"
   },
@@ -23,8 +24,9 @@ const mockAcademics: IAcademic[] = [
     name: "Dr. Ayşe Kaya",
     evaluationsCount: 32,
     explanationPointsAverage: 65,
-    attitudePointsAverage: 70,
-    supportPointsAverage: 68,
+    accessibilityPointsAverage: 90,
+    fairnessPointsAverage: 88,
+    materialQualityPointsAverage: 92,
     totalPointsAverage: 68,
     courses: "Kimya"
   },
@@ -33,10 +35,33 @@ const mockAcademics: IAcademic[] = [
     name: "Prof. Mehmet Demir",
     evaluationsCount: 28,
     explanationPointsAverage: 30,
-    attitudePointsAverage: 25,
-    supportPointsAverage: 32,
+    accessibilityPointsAverage: 90,
+    fairnessPointsAverage: 88,
+    materialQualityPointsAverage: 92,
     totalPointsAverage: 29,
     courses: "Biyoloji"
+  },
+  {
+    id: 4,
+    name: "Dr. Elif Çelik",
+    evaluationsCount: 50,
+    explanationPointsAverage: 95,
+    accessibilityPointsAverage: 90,
+    fairnessPointsAverage: 88,
+    materialQualityPointsAverage: 92,
+    totalPointsAverage: 94,
+    courses: "Felsefe, Psikoloji"
+  },
+  {
+    id: 5,
+    name: "Prof. Ali Can",
+    evaluationsCount: 60,
+    explanationPointsAverage: 80,
+    accessibilityPointsAverage: 90,
+    fairnessPointsAverage: 88,
+    materialQualityPointsAverage: 92,
+    totalPointsAverage: 82,
+    courses: "Tarih, Coğrafya"
   }
 ];
 

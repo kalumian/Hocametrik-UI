@@ -8,13 +8,26 @@ import { FaSearch } from 'react-icons/fa';
 
 // بيانات وهمية
 const fakeFaculties: Faculty[] = [
-  { id: 1, name: "Mühendislik Fakültesi", universityId: 1 },
-  { id: 2, name: "Fen Edebiyat Fakültesi", universityId: 1 },
+  { id: 1, name: "Mühendislik ve Doğa Bilimleri Fakültesi", universityId: 1 },
+  { id: 2, name: "İnsan ve Toplum bilimleri Fakültesi", universityId: 1 },
   { id: 3, name: "Tıp Fakültesi", universityId: 1 },
-  { id: 4, name: "Hukuk Fakültesi", universityId: 1 },
-  { id: 5, name: "İşletme Fakültesi", universityId: 1 },
-  { id: 6, name: "Mimarlık Fakültesi", universityId: 1 }
+  { id: 4, name: "Sağlık Bilimleri Fakültesi", universityId: 1 },
+  { id: 5, name: "Ömer Seyfettin Uygulamalı Bilimler Fakültesi", universityId: 1 },
+  { id: 6, name: "İktisadi ve İdari Bilimler Fakültesi", universityId: 1 },
+  { id: 7, name: "Eğitim Fakültesi", universityId: 2 },
+  { id: 8, name: "Güzel Sanatlar Fakültesi", universityId: 2 },
+  { id: 9, name: "Sosyal Bilimler Fakültesi", universityId: 2 },
+  { id: 10, name: "İletişim Fakültesi", universityId: 2 },
+  { id: 11, name: "Sağlık Bilimleri Fakültesi", universityId: 2 },
+  { id: 12, name: "Fen-Edebiyat Fakültesi", universityId: 2 },
+  { id: 13, name: "Mühendislik Fakültesi", universityId: 3 },
+  { id: 14, name: "İktisadi ve İdari Bilimler Fakültesi", universityId: 3 },
+  { id: 15, name: "Eğitim Fakültesi", universityId: 3 },
+  { id: 16, name: "Güzel Sanatlar Fakültesi", universityId: 3 },
+  { id: 17, name: "Sosyal Bilimler Fakültesi", universityId: 3 },
+  { id: 18, name: "Fen-Edebiyat Fakültesi", universityId: 3 }
 ];
+
 
 // ...existing fakeFaculties data...
 
@@ -82,7 +95,7 @@ export default function Faculties() {
           </motion.div>
         </motion.div>
 
-        <MobileFaculties  faculties={filteredFaculties} universityId={Number(universityId)} />
+        <MobileFaculties faculties={filteredFaculties} universityId={Number(universityId)} />
         <DesktopFaculties faculties={filteredFaculties} universityId={Number(universityId)} />
       </div>
     </div>

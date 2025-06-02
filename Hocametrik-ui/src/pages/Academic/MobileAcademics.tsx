@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function MobileAcademics({ academics }: Props) {
-    const { universityId, facultyId } = useParams<{ universityId: string; facultyId: string }>();
+  const { universityId, facultyId } = useParams<{ universityId: string; facultyId: string }>();
   const getScoreColor = (score: number) => {
     if (score >= 75) return 'text-green-600 bg-green-50';
     if (score >= 35) return 'text-yellow-600 bg-yellow-50';
@@ -32,11 +32,11 @@ export default function MobileAcademics({ academics }: Props) {
               {academic.totalPointsAverage}
             </div>
           </div>
-          
+
           <div className="text-sm text-gray-600 space-y-2">
             <p>Değerlendirme Sayısı: {academic.evaluationsCount}</p>
             <p>Dersler: {academic.courses}</p>
-            
+
             <div className="grid grid-cols-3 gap-2 mt-3">
               <div className="text-center p-2 bg-gray-50 rounded">
                 <div className="font-semibold">{academic.explanationPointsAverage}</div>

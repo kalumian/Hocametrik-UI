@@ -3,8 +3,9 @@ export default interface IAcademic {
   name: string;
   evaluationsCount: number;
   explanationPointsAverage: number;
-  attitudePointsAverage: number;
-  supportPointsAverage: number;
+  accessibilityPointsAverage: number;
+  fairnessPointsAverage: number;
+  materialQualityPointsAverage: number;
   totalPointsAverage: number;
   courses: string;
 }

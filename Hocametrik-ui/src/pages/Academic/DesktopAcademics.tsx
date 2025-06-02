@@ -89,6 +89,7 @@ export default function DesktopAcademics({ academics }: Props) {
                transition-all duration-200 group"
             >
               <motion.span
+                initial={false} // Başlangıç animasyonunu kapat
                 whileHover={{
                   y: [0, -4, 0], // 3 kademeli zıplama
                   rotate: [0, 15, -15, 0], // Sallanma

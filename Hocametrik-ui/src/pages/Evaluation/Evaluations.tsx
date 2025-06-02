@@ -14,11 +14,13 @@ const mockEvaluations: IEvaluation[] = [
     badges: [Badge.AnlatimIyi, Badge.Yardımsever, Badge.BonusVeriyor],
     rank: Rank.AA,
     explanationPoint: 90,
-    attitudePoint: 85,
-    supportPoint: 88,
+    accessibilityPoint: 85,
+    fairnessPoint: 88,
+    materialQualityPoint: 92,
     courseName: "Veri Yapıları",
     createdAt: new Date("2024-03-15"),
-    staffMemberId: 1
+    staffMemberId: 1,
+    staffMemberName: "Dr. Ahmet Yılmaz",
   },
   {
     id: 2,
@@ -26,11 +28,41 @@ const mockEvaluations: IEvaluation[] = [
     badges: [Badge.ZorSinavlar, Badge.SertNotlandirma, Badge.CokOdev],
     rank: Rank.CC,
     explanationPoint: 45,
-    attitudePoint: 30,
-    supportPoint: 25,
+    accessibilityPoint: 30,
+    fairnessPoint: 25,
+    materialQualityPoint: 40,
     courseName: "Algoritma Analizi",
     createdAt: new Date("2024-03-10"),
-    staffMemberId: 1
+    staffMemberId: 2,
+    staffMemberName: "Dr. Ayşe Kaya"
+  },
+  {
+    id: 3,
+    content: "Ders materyalleri çok kaliteli ve öğretici.",
+    badges: [Badge.ZorSinavlar, Badge.Yardımsever],
+    rank: Rank.BB,
+    explanationPoint: 80,
+    accessibilityPoint: 75,
+    fairnessPoint: 70,
+    materialQualityPoint: 90,
+    courseName: "Web Programlama",
+    createdAt: new Date("2024-03-05"),
+    staffMemberId: 3,
+    staffMemberName: "Prof. Mehmet Demir"
+  },
+  {
+    id: 4,
+    content: "Öğrencilerle iletişimi çok iyi, her zaman yardımcı oluyor.",
+    badges: [Badge.Yardımsever, Badge.AnlatimIyi],
+    rank: Rank.AA,
+    explanationPoint: 95,
+    accessibilityPoint: 90,
+    fairnessPoint: 85,
+    materialQualityPoint: 88,
+    courseName: "Mobil Programlama",
+    createdAt: new Date("2024-02-28"),
+    staffMemberId: 4,
+    staffMemberName: "Dr. Elif Çelik"
   }
 ];
 
@@ -39,8 +71,9 @@ export default function Evaluations() {
   const evaluations = mockEvaluations.filter(
     evaluation => evaluation.staffMemberId === Number(academicId)
   );
+  const staffMemberName = evaluations.length > 0 ? evaluations[0].staffMemberName : "Akademisyen";
 
-  const getAverageScore = (key: 'explanationPoint' | 'attitudePoint' | 'supportPoint') => {
+  const getAverageScore = (key: 'explanationPoint' | 'accessibilityPoint' | 'fairnessPoint' | 'materialQualityPoint') => {
     return Math.round(
       evaluations.reduce((sum, evaluation) => sum + evaluation[key], 0) / evaluations.length
     );
@@ -57,7 +90,7 @@ export default function Evaluations() {
             className="space-y-4"
           >
             <h1 className="text-3xl md:text-4xl font-bold">
-              Dr. Ahmet Yılmaz
+              {staffMemberName}
             </h1>
             <div className="flex justify-center items-center gap-2">
               <div className="text-sm text-gray-600">
@@ -72,17 +105,21 @@ export default function Evaluations() {
 
           {/* Score Bars */}
           <div className="max-w-md mx-auto mt-8 space-y-4">
-            <ProgressBar 
-              value={getAverageScore('explanationPoint')} 
-              label="Anlatım" 
+            <ProgressBar
+              value={getAverageScore('explanationPoint')}
+              label="Anlatım"
             />
-            <ProgressBar 
-              value={getAverageScore('attitudePoint')} 
-              label="Tutum" 
+            <ProgressBar
+              value={getAverageScore('accessibilityPoint')}
+              label="erişilebilirlik"
             />
-            <ProgressBar 
-              value={getAverageScore('supportPoint')} 
-              label="Destek" 
+            <ProgressBar
+              value={getAverageScore('fairnessPoint')}
+              label="Notlandırma"
+            />
+            <ProgressBar
+              value={getAverageScore('materialQualityPoint')}
+              label="Ders Materyali"
             />
           </div>
         </div>
@@ -110,24 +147,28 @@ export default function Evaluations() {
               <p className="text-gray-700 mb-4">{evaluation.content}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <ProgressBar 
-                  value={evaluation.explanationPoint} 
-                  label="Anlatım" 
+                <ProgressBar
+                  value={evaluation.explanationPoint}
+                  label="Anlatım"
                 />
-                <ProgressBar 
-                  value={evaluation.attitudePoint} 
-                  label="Tutum" 
+                <ProgressBar
+                  value={evaluation.accessibilityPoint}
+                  label="erişilebilirlik"
                 />
-                <ProgressBar 
-                  value={evaluation.supportPoint} 
-                  label="Destek" 
+                <ProgressBar
+                  value={evaluation.fairnessPoint}
+                  label="Notlandırma"
+                />
+                <ProgressBar
+                  value={evaluation.materialQualityPoint}
+                  label="Ders Materyali"
                 />
               </div>
 
               <div className="flex justify-between items-center text-sm text-gray-600">
                 <div className="flex items-center gap-4">
                   <span>{evaluation.courseName}</span>
-                  <span className={`px-2 py-1 rounded-full ${getRankColor(evaluation.rank )}`}>
+                  <span className={`px-2 py-1 rounded-full ${getRankColor(evaluation.rank)}`}>
                     {evaluation.rank}
                   </span>
                 </div>

@@ -7,15 +7,16 @@ export const getScoreColor = (score: number): string => {
   return "bg-red-500";
 };
 export default interface IEvaluation {
-    id: number;
-    content: string;
-    badges: Badge[];
-    rank: Rank;
-    explanationPoint: number;
-    attitudePoint: number;
-    supportPoint: number;
-    courseName: string;
-    createdAt: Date;
-    staffMemberId: number;
-  }
-  
+  id: number;
+  content: string;
+  badges: Badge[];
+  rank: Rank;
+  explanationPoint: number;
+  accessibilityPoint: number;
+  fairnessPoint: number;
+  materialQualityPoint: number;
+  courseName: string;
+  createdAt: Date;
+  staffMemberId: number;
+  staffMemberName: string;
+}

@@ -17,7 +17,7 @@ const mockAcademics: IAcademic[] = [
     fairnessPointsAverage: 88,
     materialQualityPointsAverage: 92,
     totalPointsAverage: 88,
-    courses: "Matematik, Fizik"
+    courses: "Matematik, Fizik",
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const mockAcademics: IAcademic[] = [
     accessibilityPointsAverage: 90,
     fairnessPointsAverage: 88,
     materialQualityPointsAverage: 92,
-    totalPointsAverage: 29,
+    totalPointsAverage: 50,
     courses: "Biyoloji"
   },
   {

@@ -111,7 +111,7 @@ export default function Academics() {
                 placeholder="Akademisyen ara..."
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 
                          focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
-                         transition-all duration-200"
+                         transition-all duration-200 "
               />
             </div>
 
@@ -120,7 +120,7 @@ export default function Academics() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 mx-auto px-4 py-2 rounded-lg
-                       bg-white border border-gray-200 text-gray-700 text-sm"
+                       bg-white border border-gray-200 text-gray-700 text-sm cursor-pointer"
             >
               <FaSort />
               {sortByHighest ? "En Yüksek Puan" : "En Düşük Puan"}

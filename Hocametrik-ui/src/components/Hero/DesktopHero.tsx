@@ -76,7 +76,7 @@ export default function DesktopHero() {
               className="bg-blue-600 text-white px-10 py-5 rounded-full
                       font-semibold text-xl flex items-center gap-3
                       hover:bg-blue-700 transition-colors duration-300
-                      shadow-lg hover:shadow-xl mx-auto"
+                      shadow-lg hover:shadow-xl mx-auto  cursor-pointer"
             >
               <span>Değerlendirmeye Başla</span>
               <FaArrowRight className="text-xl" />

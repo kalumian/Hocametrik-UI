@@ -69,7 +69,7 @@ export default function DesktopAcademics({ academics }: Props) {
                        text-blue-600 px-6 py-3 rounded-xl
                        flex items-center justify-center gap-3 font-medium
                        hover:from-blue-100 hover:to-blue-200 
-                       transition-all duration-200 group"
+                       transition-all duration-200 group cursor-pointer"
             >
               <FaStar className="text-yellow-400 group-hover:rotate-180 transition-transform duration-500" />
               <span>Değerlendirmeleri Gör</span>
@@ -86,7 +86,7 @@ export default function DesktopAcademics({ academics }: Props) {
                text-green-600 px-6 py-3 rounded-xl
                flex items-center justify-center gap-3 font-medium
                hover:from-green-100 hover:to-green-200 
-               transition-all duration-200 group"
+               transition-all duration-200 group cursor-pointer"
             >
               <motion.span
                 initial={false} // Başlangıç animasyonunu kapat

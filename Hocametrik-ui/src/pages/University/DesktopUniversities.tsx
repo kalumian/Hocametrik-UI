@@ -34,7 +34,7 @@ export default function DesktopUniversities({ universities }: Props) {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg
-                              flex items-center gap-2 text-sm"
+                              flex items-center gap-2 text-sm cursor-pointer"
                   >
                     <FaSearch />
                     Fakülteleri Gör

@@ -82,7 +82,6 @@ export default function Evaluations() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-[110px]">
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <div className="text-center mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

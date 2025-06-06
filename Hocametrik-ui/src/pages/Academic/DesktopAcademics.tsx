@@ -78,7 +78,7 @@ export default function DesktopAcademics({ academics }: Props) {
               </span>
             </motion.button>
           </Link>
-          <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/comment`}>
+          <Link to={`/universities/${universityId}/faculties/${facultyId}/academics/${academic.id}/evaluation-form`}>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

@@ -13,7 +13,7 @@ import Evaluations from './pages/Evaluation/Evaluations'
 import Contact from './pages/Contact/contact'
 import AboutPage from './pages/About/about'
 import PrivacyPolicyPage from './pages/PrivacyPolicy/privacypolicy'
-import EvaluationForm from './pages/Comment/CommentForm'
+import EvaluationForm from './pages/Evaluation/EvaluationForm'
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path="/universities/:universityId/faculties" element={<MainLayout children={<Faculties />} />} />
         <Route path="/universities/:universityId/faculties/:facultyId/academics" element={<MainLayout children={<Academics />} />} />
         <Route path="/universities/:universityId/faculties/:facultyId/academics/:academicId/evaluations" element={<MainLayout children={<Evaluations />} />} />
-        <Route path="/universities/:universityId/faculties/:facultyId/academics/:academicId/comment" element={<MainLayout children={<EvaluationForm />} />} />
+        <Route path="/universities/:universityId/faculties/:facultyId/academics/:academicId/evaluation-form/" element={<MainLayout children={<EvaluationForm />} />} />
 
         {/* <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} /> */}
